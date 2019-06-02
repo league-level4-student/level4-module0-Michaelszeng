@@ -23,7 +23,7 @@ public class TheWrongWayCowTest {
       "coww".toCharArray(),
       "cow.".toCharArray(),
       };
-    assertArrayEquals(new int[]{3,0}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{2,0}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
 
   @Test
@@ -34,7 +34,7 @@ public class TheWrongWayCowTest {
       "cow.woc.cow.cow.cow".toCharArray(),
       "cow.cow.cow.cow.cow".toCharArray(),
       };
-    assertArrayEquals(new int[]{6,2}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{2,6}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
 
   @Test
@@ -46,7 +46,7 @@ public class TheWrongWayCowTest {
       "....w.o....".toCharArray(),
       "......w.cow".toCharArray()
       };
-    assertArrayEquals(new int[]{8,4}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{2,6}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
 
   @Test

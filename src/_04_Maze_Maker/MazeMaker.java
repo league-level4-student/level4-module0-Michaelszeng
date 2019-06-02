@@ -94,14 +94,8 @@ public class MazeMaker{
 		int x = c.getX();
 		int y = c.getY();
 		ArrayList<Cell> unvisited = new ArrayList<Cell>();
-		if (x!=0 && y!=0 && maze.getCell(x-1, y-1).hasBeenVisited() == false) {
-			unvisited.add(maze.getCell(x-1, y-1));
-		}
 		if (y!=0 && maze.getCell(x, y-1).hasBeenVisited() == false) {
 			unvisited.add(maze.getCell(x, y-1));
-		}
-		if (y!=0 && x<maze.cells.length-1 && maze.getCell(x+1, y-1).hasBeenVisited() == false) {
-			unvisited.add(maze.getCell(x+1, y-1));
 		}
 		if (x!=0 && maze.getCell(x-1, y).hasBeenVisited() == false) {
 			unvisited.add(maze.getCell(x-1, y));
@@ -109,14 +103,8 @@ public class MazeMaker{
 		if (x<maze.cells.length-1 && maze.getCell(x+1, y).hasBeenVisited() == false) {
 			unvisited.add(maze.getCell(x+1, y));
 		}
-		if (x!=0 && y<maze.cells[0].length-1 && maze.getCell(x-1, y+1).hasBeenVisited() == false) {
-			unvisited.add(maze.getCell(x-1, y+1));
-		}
 		if (y<maze.cells[0].length-1 && maze.getCell(x, y+1).hasBeenVisited() == false) {
 			unvisited.add(maze.getCell(x, y+1));
-		}
-		if (y<maze.cells[0].length-1 && x<maze.cells.length-1 && maze.getCell(x+1, y+1).hasBeenVisited() == false) {
-			unvisited.add(maze.getCell(x+1, y+1));
 		}
 		return unvisited;
 	}
